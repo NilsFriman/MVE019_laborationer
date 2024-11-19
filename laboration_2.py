@@ -29,11 +29,11 @@ def graph(a, b, f, n):
     # Visar grafen
     plt.show()
 
-# Detta kan ignoreras
+# Detta kan ignoreras (men är korrekt)
 def main():
     if __name__ == "__main__":
 
-        # Vi kallar på funktionen!
+        # Kallar på funktionen
         graph(0, 3, function, 1000)
 
 
