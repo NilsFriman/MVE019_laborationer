@@ -28,15 +28,9 @@ def Riemann(a, b, f, n):
 
     return sum
 
-# Detta kan ignoreras (men är korrekt)
-def main():
-    if __name__ == "__main__":
-
-        # Loopar för att snyggt kunna printa våra integraler beroende på hur många rektanglar vi gör
-        # (Det behöver inte göras på ett såhär komplicerat sätt)
-        for i in range(6):
-            n = i * 500 + 1000
-            print("n =", str(n) + ":", Riemann(0, 3, function, n))
-
-
-main()
+    
+# Loopar för att snyggt kunna printa våra integraler beroende på hur många rektanglar vi gör
+# (Det behöver inte göras på ett såhär komplicerat sätt)
+for i in range(6):
+    n = i * 500 + 1000
+    print("n =", str(n) + ":", Riemann(0, 3, function, n))
