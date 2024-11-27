@@ -1,12 +1,10 @@
-
 # Importerar de nödvändiga biblioteken
 import numpy as np
 import matplotlib.pyplot as plt
 
 # Definerar funktionen
-def function(x):
+def g(x):
     return np.sin(x) * np.cos(x ** 2)
-
 
 def graph(a, b, f, n):
 
@@ -21,7 +19,7 @@ def graph(a, b, f, n):
 
     # Fixar så den blir snygg etc
     plt.axis('equal')
-    plt.grid('on')
+    plt.grid(True)
     plt.xlabel("X-axel")
     plt.ylabel("Y-axel")
     plt.title("Min supersexiga funktion")
@@ -29,6 +27,5 @@ def graph(a, b, f, n):
     # Visar grafen
     plt.show()
 
-
 # Kallar på funktionen
-graph(0, 3, function, 1000)
+graph(0, 3, g, 1000)
