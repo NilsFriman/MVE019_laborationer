@@ -8,7 +8,7 @@ def der_fun(x):
 
 def recursive_bisect(f, a, b, tolerance):
     c = (a + b) / 2
-    if abs(f(c)) <= tolerance:
+    if abs(f(c)) < tolerance:
         return c
     elif f(a) * f(c) < 0:
         return recursive_bisect(f, a, c, tolerance)
@@ -17,7 +17,7 @@ def recursive_bisect(f, a, b, tolerance):
 
 def boring_bisect(f, a, b, tolerance):
     c = (a + b) / 2
-    while abs(f(c)) > tolerance:
+    while tolerance < abs(f(c)):
         if f(a) * f(c) < 0:
             b = c
         else:
@@ -27,7 +27,7 @@ def boring_bisect(f, a, b, tolerance):
 
 def newton(f, df, x, tolerance):
     while abs(f(x)) > tolerance:
-        x = x - f(x) / df(x)
+        x -= f(x) / df(x)
     return x
 
 # Uppgift 1
