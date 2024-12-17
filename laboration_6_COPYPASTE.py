@@ -15,7 +15,7 @@ def bisect(f, a, b, tolerance):
     c = (a + b) / 2
 
     # Loopar tills tillräcklig bra värde är hittat.
-    while abs(f(c)) > tolerance:
+    while tolerance < abs(f(c)):
         if f(a) * f(c) < 0:
             b = c
         else:
